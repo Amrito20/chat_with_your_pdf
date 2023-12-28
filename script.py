@@ -12,7 +12,7 @@ from PyPDF2 import PdfReader
 #configuring the Palm api for the LLM 
 api_key = st.secrets["Google_API_Key"]  
 genai.configure(api_key=api_key)
-
+llm = GooglePalm(google_api_key= api_key, temperature= 0.1)
 
 
 #get the texts of the pdf
